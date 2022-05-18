@@ -1,6 +1,8 @@
 # LuamCompiler
 A compiler for a programming language I’m working on. It focuses on math with optimization to run as fast as possible.
 
+***This language is sort of a joke but I might start using it because it's fun.***
+
 ## Optimization Goals
 
 *add.luam*
