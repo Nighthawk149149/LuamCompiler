@@ -3,6 +3,13 @@ A compiler for a programming language I’m working on. It focuses on math with 
 
 ***This language is sort of a joke but I might start using it because it's fun.***
 
+## Active Development
+
+
+| Version | Supported |
+| ------- | --------- |
+| V1      |  ✔️      |
+
 ## Optimization Goals
 
 *add.luam*
