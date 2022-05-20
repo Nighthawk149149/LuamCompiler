@@ -1,48 +1,40 @@
-# LuamCompiler
-A compiler for a programming language I’m working on. It focuses on math with optimization to run as fast as possible.
+# Getting started
 
-***This language is sort of a joke but I might start using it because it's fun.***
+## Welcome !
 
-## Active Development
+{% hint style="info" %}
+**Good to know:** A design system is a product, and similar best practices to product docs apply when documenting a design system. Offering succinct ways to get started is a great way to introduce the concepts of your design system, while empowering folks to use it for their needs.
+{% endhint %}
 
+## Installing
 
-| Version | Supported |
-| ------- | --------- |
-| V1      |  ✔️      |
+Our design system is written in React, and can be installed into your project via NPM or Yarn.
 
-## Optimization Goals
+{% tabs %}
+{% tab title="npm" %}
+`npm install --save @my-product/my-design-system`
+{% endtab %}
 
-*add.luam*
-- Adds a(2) and b(3) and stores it in c to print out(5).
----
-var a,2<br>
-var b,3<br>
-var c
+{% tab title="yarn" %}
+`yarn add -S my-design-system`
+{% endtab %}
+{% endtabs %}
 
-add a,b<br>
-push c
+## Usage
 
-out c
+Import the components you need:
 
----
+`import {Button, ActionBar} from @my-product/my-design-system`
 
-|<br>
-v
+Then use them in your app or components:
 
-*add.lua*
-- Adds 2 and 3 to print 5.
----
-print(2+3)
-
----
-
-## Compiler Steps - WIP
-1. Get lines from file and filter out invalid lines. Store valid lines in a table for use.
-2. Push Optimization
-  - If push command is after a set store (Ex. add) then replace store with push.
-  - Else look back until store is found.
-  - If no store found then error.
-3. Variable Optimization
-  - Look for and store variables that are used.
-  - Replace variable content.
-  - Repeat if optimization is possible.
+```javascript
+const header = () => (
+    <div>
+        <ActionBar>
+            <Button kind="primary" label="Save" />
+            <Button kind="secondary" label="Cancel" />
+        </ActionBar>
+    </div>
+)
+```
