@@ -3,7 +3,7 @@
 ## Welcome !
 
 {% hint style="info" %}
-**Good to know:** A design system is a product, and similar best practices to product docs apply when documenting a design system. Offering succinct ways to get started is a great way to introduce the concepts of your design system, while empowering folks to use it for their needs.
+**Good to know:** Luam is a joke language. I’m working on it to learn and have fun. Underst Understand that it will have issues that I may not be able to fix.
 {% endhint %}
 
 ## Installing
