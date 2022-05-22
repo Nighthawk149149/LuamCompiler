@@ -1,6 +1,7 @@
 local replace = require("replace")
 local optimize = require("optimize")
 local headers = require("headers")
+local output = require("output")
 
 function isInvalidLine(line)
 	if line == "" or line:find("^%s*$") or line:find("^com") then return true end
@@ -21,20 +22,18 @@ function start()
 		::continue::
 	end
 
-	-- Check for headers
-	lines = headers.pass(lines)
 
 	-- Optimize
 	--lines = optimize.pass(lines)
 
-	-- Replacements
-	for i=1,#lines,1 do
-		--lines[i] = replace.replaceWithoutOp(lines[i])
-	end
+	-- Check for headers
+	headers.pass(lines)
 	
-	for i=1,#lines,1 do
-		--print(lines[i])
-	end
+	-- Replacements
+	lines = replace.pass(lines)
+
+	-- Output
+	output.pass(lines)
 end
 
 start()

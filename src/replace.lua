@@ -16,18 +16,19 @@ function replace.getKeywordFromString(line)
 	return nil
 end
 
-function replace.replaceWithoutOp(line)
-	for i=1,#keys,1 do
-		if line:find(keys[i][1]) then
-			for j=1,#keys[i],2 do
-				if keys[i][j+1] ~= nil then
-					line = line:gsub(keys[i][j], keys[i][j+1])
+function replace.pass(lines) -- O(n^3) Again O_O
+	for i=1,#lines,1 do
+		for j=1,#keys,1 do
+			if lines[i]:find(keys[j][1]) then
+				for k=1,#keys[j],2 do
+					if keys[j][k+1] ~= nil then
+						lines[i] = lines[i]:gsub(keys[j][k], keys[j][k+1])
+					end
 				end
 			end
-			return line
 		end
 	end
-	return nil
+	return lines
 end
 
 return replace
