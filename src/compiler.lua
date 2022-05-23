@@ -1,4 +1,7 @@
+local replace = require("replace")
 local optimize = require("optimize")
+local headers = require("headers")
+local output = require("output")
 
 function isInvalidLine(line)
 	if line == "" or line:find("^%s*$") or line:find("^com") then return true end
@@ -6,7 +9,6 @@ function isInvalidLine(line)
 end
 
 function start()
-	print("Starting compiler!")
 	-- Get file
 	local filePath = assert(arg[1], "Could not find file argument (compiler.lua file.luam)!")
 	local canOpen = assert(io.open(filePath, "r"), "Could not open file!")
@@ -20,12 +22,18 @@ function start()
 		::continue::
 	end
 
+
 	-- Optimize
-	lines = optimize.pass(lines)
+	--lines = optimize.pass(lines)
+
+	-- Check for headers
+	headers.pass(lines)
 	
-	for i=1,#lines,1 do
-		print(lines[i])
-	end
+	-- Replacements
+	lines = replace.pass(lines)
+
+	-- Output
+	output.pass(lines)
 end
 
 start()

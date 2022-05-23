@@ -2,10 +2,7 @@ var a,2
 var b,3
 var c
 
-com add a and b
 add a,b
 push c
 
-com print it out here
 out c
-out "com can be used to comment"
