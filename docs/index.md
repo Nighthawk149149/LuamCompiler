@@ -2,7 +2,7 @@
 title: Home
 ---
 
-# LuamCompiler is still in heavy development so please wait for bette docs at a later date!
+# LuamCompiler is still in heavy development so please wait for better docs at a later date!
 
 # Luam
 
