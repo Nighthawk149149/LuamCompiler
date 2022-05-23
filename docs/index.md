@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 # Luam
 
 Luam is an esoteric language that is coded in commands. The compiler art of the compiler is how it optimizes the code. The Luam Compiler can optimize your code to run as fast as possible
