@@ -1,6 +1,8 @@
 # LuamCompiler
 A compiler for a programming language I’m working on. It focuses on math with optimization to run as fast as possible.
 
+https://nighthawk149149.github.io/LuamCompiler/
+
 ***This language is sort of a joke but I might start using it because it's fun.***
 
 ## Optimization Goals
@@ -28,14 +30,3 @@ v
 print(2+3)
 
 ---
-
-## Compiler Steps - WIP
-1. Get lines from file and filter out invalid lines. Store valid lines in a table for use.
-2. Push Optimization
-  - If push command is after a set store (Ex. add) then replace store with push.
-  - Else look back until store is found.
-  - If no store found then error.
-3. Variable Optimization
-  - Look for and store variables that are used.
-  - Replace variable content.
-  - Repeat if optimization is possible.
